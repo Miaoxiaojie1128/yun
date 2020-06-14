@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>德云小窝</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		a{text-decoration: none; color: black;}
+		ul,li{ padding:0;margin:0;list-style:none}
+		.clear::after{content:"";display: block;height:0;clear: both;}
+		body{
+			background-color: #f3f5f7;
+		}
+		.nav{
+			width: 1200px;
+			margin: 30px auto;
+		}
+		.nav img{
+			float: left;
+        	line-height: 100px;
+        	vertical-align: middle;
+		}
+		.menu{
+			height: 42px;
+			float: left;
+			line-height: 42px;
+			width: 450px;
+			margin-left: 20px;
+		}
+		.menu a{
+			float: left;
+			width: 90px;
+			color: #353535;
+			text-align: center;
+			font-size: 18px;
+			margin-left: 15px;
+		}
+		.menu a:hover{
+			text-decoration: none;
+			size: 20px;
+			color: #353535;
+			border-bottom: 3px solid #00a4ff;
+		}
+		.form{
+			margin-left: 187px;
+		}
+		.search{
+			float: left;
+    		width: 320px;
+    		height: 14px;
+    		padding-left: 19px;
+    		padding-top: 13px;
+    		padding-bottom: 12px;
+    		border: 1px solid rgba(0,164,255,1);
+		}
+		.submit {
+    		float: left;
+   		 	width: 51px;
+    		height: 41px;
+    		border: 2px solid rgba(0,164,255,1);
+    		background: rgba(0,164,255,1) url(\搜索.png) no-repeat center center;
+		}
+		.nav-self{
+			width:60px;
+			height:12px;
+			font-size:14px;
+			color:rgba(102,102,102,1);
+			float: right;
+			margin-top: 13px;
+			margin-right: 42px;
+		}
+		.background{
+			height: 420px;
+			background:rgb(255,128,114,1) url(\背景全家福.jpg) no-repeat center center;
+			position: relative;
+		}
+		.box1{
+			width: 1200px;
+			margin: 0 auto;
+			position: relative;
+		}
+		.sidebar{
+			width:190px;
+			height:420px;
+			background:rgba(0,0,0,0.3);
+			float: left;
+			position: relative;
+		}
+		.sidebar-a{
+			line-height: 40px;
+			margin: 27px auto;
+		}
+		.sidebar li a{
+			width: 150px;
+			color: white;
+			font-size: 14px;
+			margin-left: 20px;
+			font-family: MicrosoftYaHei;
+		}
+		li a:hover{
+			color: #00B4FF;
+		}
+		.sidebar-a li span{
+			position: absolute;
+			right: 20px;
+		}
+		.column{
+			width:1200px;
+			height:60px;
+			background:rgba(255,255,255,1);
+			box-shadow:0px 2px 3px 0px rgba(118,118,118,0.2);
+			text-align: center;
+			margin: 8px auto;
+		}
+		.nav1{
+			width: 1105px;
+			height: 60px;
+			line-height: 60px;
+			font-size:16px;
+			float: left;
+			text-align: center;
+		}
+		.word{
+			border-right: 1px solid #bfbfbf;
+			float: left;
+			width: 115px;
+			height: 18px;
+			line-height: 18px;
+			margin: 21px auto;
+		}
+		.word1 a{
+			color: #00A4FF;
+			font-weight:bold;
+		}
+		.word2 a{
+			float: left;
+			width: 115px;
+			height: 18px;
+			line-height: 18px;
+			margin: 21px auto;
+		}
+		.word3 a{
+			color: #00A4FF;
+			float: right;
+			border: none;
+		}
+		.main{
+			width: 1200px;
+			margin: 30px auto;
+		}
+		.guide{
+			height: 57px;
+			line-height: 57px;
+		}
+		.left a{
+			float: left;
+			font-size:20px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(73,73,73,1);
+	 	}
+	 	.left1 a{
+			float: left;
+			font-size:20px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(73,73,73,1);
+			margin-right: 1120px;
+	 	}
+		.right a{
+			float: right;
+			margin-right: 61px;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(165,165,165,1);
+		}
+		.contant{
+			float: left;
+			width: 228px;
+			height: 270px;
+			background-color: #FFFFFF;
+			box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+			margin-bottom: 15px;
+			margin-right: 15px;
+		}
+		.cleanmargin{
+			margin-right: 0px;
+		}
+		.contant a{
+			width:185px;
+			height:34px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(5,5,5,1);
+			line-height:20px
+		}
+		.contant a h5{
+			margin: 24px 20px 0 23px;
+    		font-weight: 400;
+    		font-size: 14px;
+    		color:rgba(5,5,5,1);
+		}
+		.contant .tags{
+			margin-top: 8px;
+			margin-left: 23px;
+			color: #FF7C2D;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+		}
+		.contant .different{
+			margin-top: 28px;
+			margin-left: 23px;
+			color: #FF7C2D;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+		}
+		.contant .tags div{
+			float: right;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			margin-right: 80px;
+			color: #999;
+		}
+		.guide ul{
+			float: left;
+			margin-left: 291px;
+			margin-right: 250px;
+		}
+		.guide ul li{
+			float: left;
+			margin-right: 70px;
+		}
+		.guide ul li a{
+			font-size:16px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(165,165,165,1);
+		}
+		.guide ul li a:hover{
+			color: #00B4FF;
+		}
+		.content2 ul{
+			float: left;
+		}
+		.content2 ul li{
+			float: left;
+			margin-left: 15px;
+		}
+		.picture{
+			float: left;
+			position: relative;
+		}
+		.rela{
+			position: absolute;
+			left: 25px;
+			top: 99px;
+			color: #F9E103;
+			font-size:30px;
+			font-family:Microsoft YaHei;
+		}
+		.rela2{
+			position: absolute;
+			left: 25px;
+			top: 140px;
+			color: #FFFFFF;
+			font-size:27px;
+			font-family:Microsoft YaHei;
+		}
+		.rela3 a{
+			left: 28px;
+			top: 182px;
+			position: absolute;
+			font-size:13px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:#F9E103;
+			line-height:20px;
+			border: 1px solid #F9E103;
+			padding: 3px 17px 3px 17px;
+		}
+		.possition{
+			width:228px;
+			height:122px;
+			background:rgba(0,0,0,1);
+			opacity:0.5;
+			position: absolute;
+			bottom: 4px;
+		}
+		.possition .teachername{
+			position: absolute;
+			font-size:18px;
+			font-family:Microsoft YaHei;
+			font-weight:bold;
+			color:rgba(255,255,255,1);
+			line-height:20px;
+			top: 21px;
+			left: 29px;
+		}
+		.possition .direction{
+			position: absolute;
+			font-size: 14px;
+			color:rgba(255,255,255,1);
+			top: 21px;
+			right: 91px;
+		}
+		.possition .achievement{
+			position: absolute;
+			font-size: 12px;
+			color:rgba(255,255,255,1);
+			width:175px;
+			height:53px;
+			top: 51px;
+			right: 25px;
+		}
+		.footer{
+			position: relative;
+			margin-top: 1250px;
+			height:417px;
+			background:rgba(255,255,255,1);
+		}
+		.footer .bottom{
+			width: 1200px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.footer .footer-word1{
+			position: absolute;
+			top: 124px;
+			left: 5px;
+			font-size:36px;
+			font-family:Microsoft YaHei;
+			font-weight:bold;
+			color:red;
+			line-height:21px;
+		}
+		.footer .footer-word2{
+			position: absolute;
+			top: 195px;
+			left: 5px;
+			font-size:12px;
+			font-family:SimSun;
+			font-weight:400;
+			color:rgba(102,102,102,1);
+			line-height:18px;
+		}
+		.footer .footer-button a{
+			position: absolute;
+			top: 251px;
+			left: 5px;
+			font-size:16px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:red;
+			line-height:18px;
+			border: 1px solid #00A4FF;
+			padding: 11px 30px 10px 27px;
+		}
+		.footer .footer-title1{
+			position: absolute;
+			top: 130px;
+			left: 650px;
+			font-size:16px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(51,51,51,1);
+			line-height:21px;
+		}
+		.footer .footer-title2{
+			position: absolute;
+			top: 130px;
+			left: 896px;
+			font-size:16px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(51,51,51,1);
+			line-height:21px;
+		}
+		.footer .footer-title3{
+			position: absolute;
+			top: 130px;
+			right: 28px;
+			font-size:16px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(51,51,51,1);
+			line-height:21px;
+		}
+		.footer .list1{
+			position: absolute;
+			top: 161px;
+			left: 650px;
+		}
+		.footer .list1 a{
+			font-size:12px;
+			font-family:SimSun;
+			font-weight:400;
+			color:rgba(51,51,51,1);
+			line-height:21px;
+		}
+		.footer .list2{
+			position: absolute;
+			top: 161px;
+			left: 896px;
+		}
+		.footer .list2 a{
+			font-size:12px;
+			font-family:SimSun;
+			font-weight:400;
+			color:rgba(51,51,51,1);
+			line-height:21px;
+		}
+		.footer .list3{
+			position: absolute;
+			top: 161px;
+			right: 43px;
+		}
+		.footer .list3 a{
+			font-size:12px;
+			font-family:SimSun;
+			font-weight:400;
+			color:rgba(51,51,51,1);
+			line-height:21px;
+		}
+		.wen{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav clear">
+		<img src="logo.jpg" alt="logo">
+		<div class="menu clear">
+			<a href="#">首页</a>
+			<a href="#">家谱</a>
+			<a href="#">重大事件</a>
+		</div>
+     	<div class="nav-self">
+     		<a href="#">登录</a>
+
+     	</div>
+		<form class="form clear">
+            <input type="text" placeholder="济南德云社将建成" class="search" />
+            <input type="button" class="submit" />
+     	</form>
+	</div>
+	<div class="background clear">
+		<div class="box1">
+			<div class="sidebar">
+				<ul class="sidebar-a clear">
+                	<li><a href="#">演出信息<span>></span></a></li>
+                	<li><a href="#">艺人风采<span>></span></a></li>
+                	<li><a href="#">饭拍广场<span>></span></a></li>
+                	<li><a href="#">场地介绍<span>></span></a></li>
+                	<li><a href="#">商务合作<span>></span></a></li>
+                	<li><a href="#">粉丝活动<span>></span></a></li>
+                	<li><a href="#">票务信息<span>></span></a></li>
+                	<li><a href="#">电视节目<span>></span></a></li>
+                	<li><a href="#">主要作品<span>></span></a></li>
+            	</ul>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="nav1">
+            <div class="word word1"><a href="#">节目单</a></div>
+            <div class="word"><a href="#">德云一队</a></div>
+            <div class="word"><a href="#">德云二队</a></div>
+            <div class="word"><a href="#">德云三队</a></div>
+            <div class="word"><a href="#">德云四队</a></div>
+            <div class="word"><a href="#">德云五队</a></div>
+            <div class="word"><a href="#">德云六队</a></div>
+            <div class="word"><a href="#">德云七队</a></div>
+            <div class="word2"><a href="#">德云八队</a></div>
+            <div class="word3"><a href="#">青年队</a></div>
+        </div>
+	</div>
+	<div class="main">
+		<div class="guide">
+			<div class="left"><a href="">个人推荐</a></div>
+			<div class="right"><a href="">查看全部</a></div>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="专场1.jpg" alt="img">
+				<h5>北京纲丝节专场</h5>
+				<div class="tags">北京<div>•&nbsp;&nbsp;&nbsp;100328人想看</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="专场2.jpg" alt="img">
+				<h5>享岳十年-岳云鹏孙越专场</h5>
+				<div class="tags">烟台<div>•&nbsp;&nbsp;&nbsp;16854人想看</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="专场3.jpg" alt="img">
+				<h5>云起雷鸣-张云雷杨九郎专场</h5>
+				<div class="tags">墨尔本<div>•&nbsp;&nbsp;&nbsp;11685人想看</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="专场4.jpg" alt="img">
+				<h5>玲珑-张九龄王九龙生日专场</h5>
+				<div class="tags">上海<div>•&nbsp;&nbsp;&nbsp;8541人想看</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant cleanmargin">
+			<a href="#">
+				<img src="专场5.jpg" alt="img">
+				<h5>麒麟剧社-郭德纲中国大戏院专场</h5>
+				<div class="tags">上海<div>•&nbsp;&nbsp;&nbsp;4521人想看</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="三庆园PS.jpg" alt="img">
+				<h5>三庆园剧场简介</h5>
+				<div class="tags">北京<div>•&nbsp;&nbsp;&nbsp;11458人已到访</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="三里屯.jpg" alt="img">
+				<h5>三里屯剧场简介</h5>
+				<div class="tags">北京<div>•&nbsp;&nbsp;&nbsp;11458人已到访</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="湖光会馆.jpg" alt="img">
+				<h5>湖广会馆简介</h5>
+				<div class="tags">北京<div>•&nbsp;&nbsp;&nbsp;11458人已到访</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="广德楼.jpg" alt="img">
+				<h5>广德楼剧场简介</h5>
+				<div class="tags">北京<div>•&nbsp;&nbsp;&nbsp;11458人已到访</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant cleanmargin">
+			<a href="#">
+				<img src="黑龙江德云社.jpg" alt="img">
+				<h5>黑龙江德云社简介</h5>
+				<div class="tags">东北<div>•&nbsp;&nbsp;&nbsp;11458人已到访</div>
+				</div>
+			</a>
+		</div>
+		<div class="guide">
+			<div class="left"><a href="">固定组合</a></div>
+			<ul>
+				<li><a href="">鱼进锅</a></li>
+				<li><a href="">九辫</a></li>
+				<li><a href="">玲珑</a></li>
+				<li><a href="">熙华</a></li>
+			</ul>
+			<div class="right"><a href="">查看全部</a></div>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="岳岳.jpg" alt="img">
+				<h5>岳云鹏 × 孙越</h5>
+				<div class="tags different">岳越<div>•&nbsp;&nbsp;&nbsp;更多作品</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="麒麟.jpg" alt="img">
+				<h5>郭麒麟 × 阎鹤祥</h5>
+				<div class="tags different">祥林<div>•&nbsp;&nbsp;&nbsp;更多作品</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="九郎.jpg" alt="img">
+				<h5>张云雷 × 杨九郎</h5>
+				<div class="tags different">九辫<div>•&nbsp;&nbsp;&nbsp;更多作品</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant">
+			<a href="#">
+				<img src="熙华.jpg" alt="img">
+				<h5>尚九熙 × 何九华</h5>
+				<div class="tags different">熙华<div>•&nbsp;&nbsp;&nbsp;更多作品</div>
+				</div>
+			</a>
+		</div>
+		<div class="contant cleanmargin">
+			<a href="#">
+				<img src="玲珑.jpg" alt="img">
+				<h5>张九龄 × 王九龙</h5>
+				<div class="tags different">玲珑<div>•&nbsp;&nbsp;&nbsp;更多作品</div>
+				</div>
+			</a>
+		</div>
+		<div class="guide">
+			<div class="left"><a href="">重要人物</a></div>
+			<ul>
+				<li><a href="">云字科</a></li>
+				<li><a href="">鹤字科</a></li>
+				<li><a href="">九字科</a></li>
+				<li><a href="">霄字科</a></li>
+			</ul>
+		</div>
+		<div class="content2">
+			<div class="picture clear">
+				<img src="名单.jpg" alt="logob">
+				<span class="rela">德云社</span>
+				<span class="rela2">曲艺的天堂</span>
+				<span class="rela3"><a href="#">点击查看</a></span>
+			</div>
+			<ul>
+				<li class="picture clear" >
+					<img src="郭德纲.jpg" alt="teacher">
+					<div class="possition">
+						<span class="teachername">郭德纲</span>
+						<span class="direction">班主</span>
+						<span class="achievement">
+							先拜评书前辈高庆海学习评书，后跟随相声名家常宝丰学相声，又师从相声大师侯耀文……
+						</span>
+					</div>
+				</li>
+				<li class="picture clear" >
+					<img src="于谦.jpg" alt="teacher2">
+					<div class="possition">
+						<span class="teachername">于谦</span>
+						<span class="direction">班主夫人</span>
+						<span class="achievement">
+							在北京市戏曲学校相声班期间跟随相声演员王世臣、罗荣寿、高凤山、赵世忠学习。后拜师石富宽……
+						</span>
+					</div>
+				</li >
+				<li class="picture clear" >
+					<img src="郭麒麟.jpg" alt="teacher3">
+					<div class="possition">
+						<span class="teachername">郭麒麟</span>
+						<span class="direction">少班主</span>
+						<span class="achievement">
+							父亲是德云社的班主郭德纲，老师是郭德纲的搭档于谦，搭档是阎鹤祥。本名郭奇林……
+						</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="bottom">
+		<span class="footer-word1">德云社</span>
+		<span class="footer-word2">让相声回归到小剧场中，让普通百姓能在闲暇时听听相声、喝喝茶。</span>
+		<span class="footer-button"><a href="#">下载APP</a></span>
+		<span class="footer-title1">关于德云社</span>
+		<ul class="list1">
+			<li><a href="#">关于</a></li>
+			<li><a href="#">网站管理</a></li>
+			<li><a href="#">德云未来</a></li>
+			<li><a href="#">官方客服</a></li>
+			<li><a href="#">版权所有</a></li>
+		</ul>
+		<span class="footer-title2">特别感谢</span>
+		<ul class="list2">
+			<li><a href="#" class="wen">恩师侯耀文先生</a></li>
+			<li><a href="#" class="wen">恩师金文声先生</a></li>
+			<li><a href="#" class="wen">前辈张文顺先生</a></li>
+			<li><a href="#" class="wen">前辈李文山先生</a></li>
+			<li><a href="#" class="wen">前辈邢文昭先生</a></li>
+		</ul>
+		<span class="footer-title3">德云社创始人</span>
+		<ul class="list3">
+			<li><a href="#">郭德纲先生</a></li>
+			<li><a href="#" class="wen" >张文顺先生</a></li>
+		</ul>
+		</div>
+	</div>
+</body>
+</html>
